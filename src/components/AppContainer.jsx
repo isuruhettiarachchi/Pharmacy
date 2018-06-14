@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import Drugs from './drugs.component/drugs.component';
 import Patients from './patients.component/patients.component';
+import AddPatient from './patients.component/AddPatient.component';
 
 export default class AppContainer extends Component {
     render() {
@@ -18,11 +19,14 @@ export default class AppContainer extends Component {
                             <Link to="/about">Patients</Link>
                         </div>
                     </div>
+                    <div>
+                        
+                    </div>
                     <Route exact path="/" render={props => {
                         return <Drugs/>
                     }}/>
                     <Route path="/about" render={props => {
-                        return <Patients/>
+                        return <AddPatient/>
                     }}/>
                 </div>
             </Router>
