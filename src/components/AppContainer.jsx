@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import Drugs from './drugs.component/drugs.component';
 import Patients from './patients.component/patients.component';
-import Pharmacists from './pharmacists.component/pharmcists.component'
+import Pharmacists from './pharmacists.component/pharmcists.component';//'./pharmacists.component/AddPharmacist';
 
 export default class AppContainer extends Component {
     render() {
