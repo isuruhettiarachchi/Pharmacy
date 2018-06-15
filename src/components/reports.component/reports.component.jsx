@@ -15,13 +15,13 @@ export default class Reports extends Component{
     }
 
     componentWillMount(){
-
+        this.getReports();
     }
 
     getReports(){
         axios.get(NODE_URL+"/reports", {headers:{'crossDomain':true}}).then(
             (recieved)=>{
-                cosnole.log(recieved);
+                console.log(recieved);
                 if(recieved.status==200){
 
                 }
@@ -31,6 +31,17 @@ export default class Reports extends Component{
                 }
                 
             )
+    }
+
+    render(){
+        return <div>
+            <h3 align="center">Reports on dispenses</h3>
+
+            <br/>
+            <table id="reportTable"></table>
+            <input type="button" value="Generate Report" onClick={this.getReports()} />
+            
+            </div>
     }
 
 }
