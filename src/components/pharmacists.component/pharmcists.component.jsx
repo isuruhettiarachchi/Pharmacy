@@ -3,8 +3,8 @@ import React, {Component}       from 'react';
 import axios                    from 'axios';
 // import PropTypes                from 'prop-types';
 
-var URI                         = require("../../Config.app");
-var NODE_URI = URI.NODE_API;
+var URL                         = require("../../Config.app");
+var NODE_URL = URL.NODE_API;
 var pharmacists =  new Map();
 // var pharmacistID = [];
 export default class Pharmacists extends Component{
@@ -34,7 +34,7 @@ export default class Pharmacists extends Component{
     }
 
     getAllPharmacists(){
-        axios.get(NODE_URI, {headers: { 'crossDomain': true }}).then((results)=>{
+        axios.get(NODE_URL+"/pharmacists", {headers: { 'crossDomain': true }}).then((results)=>{
             // console.log(results);
             
             if(results["status"]===200){
