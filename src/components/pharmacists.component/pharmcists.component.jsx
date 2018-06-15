@@ -40,7 +40,7 @@ export default class Pharmacists extends Component{
             if(results["status"]===200){
                 var pharmacistsArray = results['data']['message'];
                 for(var i in pharmacistsArray){
-                    // console.log(i+ ", " +JSON.stringify(pharmacistsArray[i]));
+                    // console.log(i+ ", " +JSON.stringify(pharmacistsArray));
                     if(pharmacistsArray[i].id!=null&&pharmacistsArray[i].name!=null){
                          pharmacists.set(pharmacistsArray[i].id,pharmacistsArray[i].name);
                         //  console.log(this.state+"pharmac:"+pharmacists);
@@ -76,9 +76,9 @@ export default class Pharmacists extends Component{
                 </thead>
                 <tbody id= "tablePhB">
                     {
-                        
+                    
                  this.state.pharmacists.forEach(
-                                    
+                    
                                     (key,value) => {
                           
                                 
@@ -95,7 +95,9 @@ export default class Pharmacists extends Component{
                                     d2.colSpan  =5;
                                     r.appendChild(d1);
                                     r.appendChild(d2);
-                                    tb.appendChild(r);
+                                    
+                                         tb.appendChild(r);
+
                                     
                                     // return <tr>
                                     //             {

@@ -65,38 +65,42 @@ export default class AddPharmacist extends Component{
                 <div>
                     <form onSubmit = {this.addNewPharmacist.bind(this)}>
                         <div>
-                            <label>Name:
+                            <label className="col-lg-12"><span className="col-lg-6">Name:</span>
+                                <span className="col-lg-6">
                                 <input type="text" ref="pharmacistName"/>
+                                </span>
                             </label>
                             <br/>
                         </div>
                         <div>
-                            <label>NIC:
-                                <input type="text" ref="pharmacistNIC"/>
+                            <label className="col-lg-12"><span className="col-lg-6">NIC:</span>
+                                
+                            <span className="col-lg-6"></span><input type="text" ref="pharmacistNIC"/>
                             </label>
                             <br/>
                         </div>
-                        <div>
-                            <label>Address:
+                        <div >
+                            <label className="col-lg-12"><span className="col-lg-6">Address:</span>
                                 <input type="text" ref="pharmacistAddress"/>
                             </label>
                             <br/>
                         </div>
                         <div>
-                            <label>Contact:
-                                <input type="tel" ref="pharmacistContact"/>
+                            <label className="col-lg-12"><span className="col-lg-6">Contact:</span>
+                            <span className="col-xm-2"></span><input type="tel" ref="pharmacistContact"/>
                             </label>
                             <br/>
                         </div>
                         <div>
-                            <label>Email:
-                                <input type="text" ref="pharmacistEmail"/>
+                            <label  className="col-lg-4" ><span className="col-sm-6">Email  :</span>
+                            
+                            <span className="col-xm-2"></span><input type="text" ref="pharmacistEmail"/>
                             </label>
                             <br/>
                         </div>
                         <div>
-                            <label>Role:
-                                <input type="text" ref="pharmacistRole"/>
+                            <label  className="col-lg-12" ><span className="col-sm-8">Role:</span>
+                            <span className="col-sm-2"></span><input type="text" ref="pharmacistRole"/>
                             </label>
                             <br/>
                         </div>
