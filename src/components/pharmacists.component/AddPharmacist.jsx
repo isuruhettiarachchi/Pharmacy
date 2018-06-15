@@ -39,7 +39,7 @@ export default class AddPharmacist extends Component{
 
     registerPharmacist(refs){
         alert(refs.pharmacistName.value);
-        axios.post(URI.NODE_API,
+        axios.post(URI.NODE_API+"/pharmacists",
             {
                 
                 name:refs.pharmacistName.value, nic:refs.pharmacistNIC.value, address:refs.pharmacistAddress.value, contact:refs.pharmacistContact.value, email:refs.pharmacistEmail.value, username:refs.pharmacistUname.value, password:window.btoa(refs.pharmacistPassword.value), role:refs.pharmacistRole.value
